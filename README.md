@@ -1,2 +1,2 @@
 exercise HTML section:
- - Head
+ - Exercise 1 - Head
