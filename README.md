@@ -1,1 +1,2 @@
-# html-head-
+exercise HTML section:
+ - Head
