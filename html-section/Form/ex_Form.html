@@ -41,15 +41,13 @@
         pattern="[0-9]+"
         minlength="8" maxlength="10">
 
-    <label name="plan" id="plan">Chose your plan</label>
-        <label for="free">Free</label>
-            <input type="radio" name="free" id="plan">
-        <label for="bronze">Bronze 5,00$</label>
-            <input type="radio" name="bronze" id="plan">
-        <label for="silver">Silver 10.00$</label>
-            <input type="radio" name="silver" id="plan">
-        <label for="gold">Gold 15,00$</label>
-            <input type="radio" name="gold" id="plan">
+    <label for="plan">Choose your plan</label>
+        <select id="plan">
+            <option value="free">Free
+            <option value="bronze">Bronze 5,00$
+            <option value="silver">Silver 10.00$
+            <option value="gold">Gold 15,00$
+        </select>
 
     <label for="pro_plan">Select for Pro Plan!</label>
         <input type="checkbox" name="pro_plan" id="pro_plan">
@@ -70,9 +68,8 @@
     <label for="billing_address">Billing address</label>
         <input type="text" name="billing_address" id="billing_address"
         minlength="8" maxlength="50" placeholder="Billing address">
-
         <br>
-
-    <button>Submit</button>
+    
+    <button type="submit">Submit</button>
   </body>
 </html>
