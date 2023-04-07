@@ -1,4 +1,3 @@
-
 Create a table with three columns: title, users cash entries and user cash outflows.
 * The first column should contain the names of months.
 * The second column should contain the cash entries.
