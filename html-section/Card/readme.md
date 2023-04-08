@@ -1,3 +1,3 @@
-exercise HTML section:
+Exercises HTML section:
 
-Exercise 8 - Card
+- Exercise 8 - Card

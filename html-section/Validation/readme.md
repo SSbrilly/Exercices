@@ -1,2 +1,3 @@
-exercise HTML section:
- - Exercise 6   - Validation
+Exercise HTML section:
+
+ - Exercise 6  - Validation

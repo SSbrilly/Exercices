@@ -1,3 +1,3 @@
-exercise HTML section:
+Exercise HTML section:
 
-Exercise 7 - Navbar
+- Exercise 7 - Navbar

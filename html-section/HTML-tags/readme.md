@@ -1,3 +1,3 @@
-exercise HTML section:
+Exercise HTML section:
 
-Exercise 2 - HTML tags
+- Exercise 2 - HTML tags

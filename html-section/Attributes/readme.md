@@ -1,1 +1,3 @@
-Exercise 3 - Attributes
+Exercises HTML section:
+
+- Exercise 3 - Attributes
