@@ -1,0 +1,98 @@
+:root {
+  --border: 1px solid rgb(255, 255, 255);
+  --soundtracks: #424242;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: small;
+}
+
+body {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  max-width: 250px;
+  max-height: auto;
+  border-radius: 5px;
+}
+
+.card {
+  display: grid;
+  padding: 7px;
+  margin: 0;
+  text-align: left;
+  background: linear-gradient(rgb(255, 255, 255), #8896ae);
+}
+
+img {
+  object-fit: contain;
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  border: var(--border);
+  text-align: center;
+}
+
+.songs {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin: 0;
+  border: var(--border);
+}
+
+.songs :nth-child(1) {
+    background-color: var(--soundtracks);
+    color: white;
+}
+
+.songs :nth-child(2) {
+    background-color: var(--soundtracks);
+}
+
+.songs :nth-child(3) {
+    background-color: var(--soundtracks);
+}
+
+.songs div {
+  border: var(--border);
+  column-width: auto;
+  height: 30px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.song:hover {
+  background-color: rgba(240, 248, 255, 0.35);
+}
+
+.footer {
+  padding: 7px 0px 0px 0px;
+  display: grid;
+}
+
+.button {
+  transition-duration: 0.4s;
+  background: rgb(0, 0, 0);
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+
+.button:hover {
+  background-color: #2da331;
+  color: white;
+}
+
+a {
+    text-align: center;
+    padding: 7px 0px 0px 0px;
+}
+
+.follow {
+    font-size: 8px;
+    text-align: center;
+    color: rgb(89, 89, 89);
+}
