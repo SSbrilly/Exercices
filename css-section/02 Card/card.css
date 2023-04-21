@@ -62,6 +62,9 @@ img {
   height: 30px;
   font-size: 12px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .song:hover {
