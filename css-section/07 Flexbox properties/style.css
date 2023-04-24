@@ -1,6 +1,5 @@
 body {
-  width: 60em;
-  margin: 0 auto;
+  display: flex;
 }
 
 section {
@@ -8,24 +7,31 @@ section {
   margin: 1em;
 }
 
+#yellow {
+  background-color: #ffff92;
+  grid-area: yellow;
+}
+
 #green {
   background-color: #8ffda7;
+  grid-area: green;
 }
 
 #orange {
   background-color: #ffc788;
+  grid-area: orange;
+  width: 200px;
 }
 
-#yellow {
-  background-color: #ffff92;
-}
 
 #red {
   background-color: #ff919c;
+  grid-area: red;
 }
 
 #blue {
   background-color: #98d2ff;
+  grid-area: blue;
 }
 
 ul {
