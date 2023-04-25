@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --card-gap: 30px;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1500px;
+  gap: var(--card-gap);
+}
+
+.container {
+  max-width: 340px;
+  width: 100%;
+  box-shadow: 0 5px 5px rgb(143, 143, 143);
+  border-radius: 18px;
+  background: linear-gradient(gray, rgb(232, 232, 232));
+}
+
+.heading {
+  padding: 0.5rem;
+  display: flex;
+  /* align-items: center; */
+  justify-content: left;
+  align-items: center;
+  /* justify-content: space-evenly; */
+}
+
+.circle {
+  border: 2px solid white;
+  background-color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.cards .container .heading .title h4 {
+  margin: 0.5rem 0 0 0.5rem;
+}
+
+.cards .container .heading .title span {
+  margin: 0.3rem 0 0.5rem 0.5rem;
+  color: white;
+  font-size: 0.7rem;
+}
+
+.container .heading .icon {
+  margin-left: auto;
+  align-items: center;
+}
+
+.cards .container .img img {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+}
+
+.container .icon {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0 0 1.5rem;
+}
+
+.container .description {
+  padding: 0 0.5rem 0.5rem 0.5rem;
+  text-align: justify;
+}
+
+/*tablet*/
+@media screen and (max-width: 768px) {
+  .cards {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .container {
+    width: calc(50% - var(--card-gap));
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 560px) {
+  .cards {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .container {
+    width: 100%;
+  }
+}
