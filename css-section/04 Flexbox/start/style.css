@@ -12,10 +12,19 @@ html {
   position: relative;
 }
 
-.logo {
+.links {
+height: inherit;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 30rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
 }
 
 .logo img {
@@ -34,7 +43,6 @@ a:hover {
 
 .bottom {
     text-align: center;
-    display: block;
     align-items: center;
     justify-content: center;
     position: absolute;
