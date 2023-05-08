@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --width: 300px;
+  --heigth: 300px;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.container {
+  width: var(--width);
+  height: var(--heigth);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: calc(var(--heigth) / 6);
+  grid-template-columns: calc(var (--width) / 4);
+  box-shadow: 9px 13px 17px 3px rgba(0, 0, 0, 0.32);
+  -webkit-box-shadow: 9px 13px 17px 3px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: 9px 13px 17px 3px rgba(0, 0, 0, 0.32);
+  border-radius: 10px;
+  border: transparent;
+}
+
+div:not(.container) {
+  padding: 0.5rem;
+  border: 1px gray solid;
+}
+
+.res {
+  grid-column: span 4;
+  text-align: right;
+  background-color: rgb(96, 96, 96);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.zero,
+.dot,
+.ac {
+  grid-row: span 1;
+}
+
+.equ {
+  grid-row: span 4;
+  grid-column: span 1;
+  background-color: rgb(255, 92, 92);
+}
+
+.plus,
+.min,
+.mult,
+.div {
+  background-color: rgb(208, 221, 231);
+}
+
+.container .res {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.container .zero {
+  border-bottom-left-radius: 5px;
+}
+
+.container .equ {
+  border-bottom-right-radius: 5px;
+}
+
+.container .plus,
+.container .seven,
+.container .four,
+.container .one,
+.container .zero {
+  border-left: none;
+}
+
+.container .div,
+.container .equ,
+.container .res {
+  border-right: none;
+}
+
+.container .zero,
+.container .dot,
+.container .equ,
+.container .ac {
+  border-bottom: none;
+}
+
+.container > div:not(.res) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
