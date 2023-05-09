@@ -1,5 +1,10 @@
 function uncompletedNotes(notes) {
-  // ...
+  const uncompleted = notes.map((index) => {
+    return index.todos.filter((element) => {
+      return element.done === false;
+    });
+  });
+  return uncompleted;
 }
 
 const notes = [
@@ -52,4 +57,4 @@ const notes = [
   },
 ];
 
-uncompletedNotes(notes);
+console.log(uncompletedNotes(notes));
