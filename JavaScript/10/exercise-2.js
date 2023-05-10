@@ -1,16 +1,17 @@
-const order = {
-  customer: 'Simone',
-  address: 'via Lombardia 666',
-  city: 'Rome',
-};
+const order = [
+  {
+    customer: "Simone",
+    location: {
+      address: "via Lombardia 666",
+      city: "Roma",
+    }
+  },
+];
 
-if (
-  order &&
-  order.customer &&
-  order.address &&
-  !order.city
-) {
-  console.log("City is required");
-} else {
-  console.log(order.city);
-}
+order.forEach((el) => {
+  if (el?.location?.city) {
+    console.log(el?.location?.city);
+  } else {
+    console.log('City is required');
+  }
+});
