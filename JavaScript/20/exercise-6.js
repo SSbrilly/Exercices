@@ -5,6 +5,8 @@ class Square {
 }
 
 class Rectangle {
+  width = 8;
+  height = 10;
   constructor(width, height) {
     this.width = width;
     this.height = height;
@@ -18,7 +20,15 @@ class Circle {
 }
 
 class AreaCalculator {
-  // ...
+  static calculate(area) {
+    if (area instanceof Square) {
+      return Math.pow(area.side, 2);
+    } else if (area instanceof Rectangle) {
+      return area.width * area.height;
+    } else if (area instanceof Circle) {
+      return Math.PI * Math.pow(area.radius, 2);
+    }
+  }
 }
 
 const square = new Square(4);
