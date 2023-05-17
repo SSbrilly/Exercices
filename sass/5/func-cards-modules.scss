@@ -1,0 +1,45 @@
+@use "./function-module.scss" as f;
+
+@for $i from 1 to 20 {
+  $backgound-color: darken(white, $i * 5%);
+  $text-color: lighten(white, $i * 5%);
+  @if $i != 10 {
+    .main {
+      &__squares {
+        div:nth-child(#{$i}) {
+          background-color: $backgound-color;
+          color: $text-color;
+        }
+      }
+    }
+  } @else {
+    .main {
+      &__squares {
+        div:nth-child(#{$i}) {
+          background-color: blue;
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+$numbers: (
+  "1rem": 1rem,
+  "2rem": 2rem,
+  "3rem": 3rem,
+);
+
+@each $key, $val in $numbers {
+  $font-size: $val;
+  .main {
+    &__squares {
+      .fs-#{$key} {
+        width: f.rem(45);
+        height: f.rem(45);
+        border: f.rem(1) solid red;
+        font-size: $font-size;
+      }
+    }
+  }
+}

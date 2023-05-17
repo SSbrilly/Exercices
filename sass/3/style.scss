@@ -1,0 +1,56 @@
+@use "./function-module.scss" as f;
+@use "./variables-module.scss" as v;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: f.rem(1) solid v.$color-primary;
+  padding: f.rem(20);
+  font-size: f.rem(16);
+
+  & h1 {
+    color: v.$color-tertiary;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: f.rem(-1);
+      border-width: 0 0 f.rem(1);
+      border-style: solid;
+      border-color: v.$color-secondary;
+    }
+  }
+
+  &__section {
+    display: flex;
+
+    &--odd {
+      text-align: center;
+      padding: f.rem(15) f.rem(50);
+      @include v.article-card(v.$color-secondary, v.$color-tertiary, f.rem(16));
+    }
+
+    &--even {
+      text-align: center;
+      padding: f.rem(15) f.rem(50);
+      @include v.article-card(v.$color-primary, v.$color-tertiary, f.rem(16));
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    margin-top: f.rem(20);
+    @include v.article-card(v.$color-tertiary, v.$color-secondary, f.rem(16));
+
+    &--article {
+      font-size: f.rem(24);
+      color: v.$color-tertiary;
+      text-align: center;
+    }
+  }
+}

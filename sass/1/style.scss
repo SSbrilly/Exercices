@@ -1,0 +1,59 @@
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $color-primary;
+  padding: 20px;
+
+  & h1 {
+    color: $color-tertiary;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      border-width: 0 0 1px;
+      border-style: solid;
+      border-color: $color-secondary;
+    }
+  }
+  &__section {
+    display: flex;
+
+    &--one {
+      text-align: center;
+      padding: 15px 50px;
+      border: 1px solid $color-tertiary;
+      color: $color-secondary;
+    }
+
+    &--two {
+      text-align: center;
+      padding: 15px 50px;
+      border: 1px solid $color-tertiary;
+      color: $color-primary;
+    }
+
+    &--three {
+      text-align: center;
+      padding: 15px 50px;
+      border: 1px solid $color-tertiary;
+      color: $color-secondary;
+    }
+
+    &--four {
+      text-align: center;
+      padding: 15px 50px;
+      border: 1px solid $color-tertiary;
+      color: $color-primary;
+    }
+  }
+}

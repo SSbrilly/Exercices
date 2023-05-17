@@ -1,0 +1,9 @@
+@mixin article-card($color, $border-color, $font-size) {
+  color: $color;
+  border: 1px solid $border-color;
+  font-size: $font-size;
+}
+
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
