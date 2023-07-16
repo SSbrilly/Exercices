@@ -1,0 +1,51 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  padding: 20px;
+}
+.main h1 {
+  color: green;
+  position: relative;
+}
+.main h1::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: blue;
+}
+.main__section {
+  display: flex;
+}
+.main__section--one {
+  text-align: center;
+  padding: 15px 50px;
+  border: 1px solid green;
+  color: blue;
+}
+.main__section--two {
+  text-align: center;
+  padding: 15px 50px;
+  border: 1px solid green;
+  color: red;
+}
+.main__section--three {
+  text-align: center;
+  padding: 15px 50px;
+  border: 1px solid green;
+  color: blue;
+}
+.main__section--four {
+  text-align: center;
+  padding: 15px 50px;
+  border: 1px solid green;
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */

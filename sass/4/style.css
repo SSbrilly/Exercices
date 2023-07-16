@@ -1,0 +1,58 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.0625rem solid red;
+  padding: 1.25rem;
+  font-size: 1rem;
+}
+.main h1, .main h2 {
+  color: green;
+  position: relative;
+}
+.main h1 ::after, .main h2 ::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -0.0625rem;
+  border-width: 0 0 0.0625rem;
+  border-style: solid;
+  border-color: blue;
+}
+.main h2 {
+  border: 0.0625rem solid red;
+  padding: 1rem;
+}
+.main__section {
+  display: flex;
+}
+.main__section--odd {
+  text-align: center;
+  padding: 0.9375rem 3.125rem;
+  color: blue;
+  border: 1px solid green;
+  font-size: 1rem;
+}
+.main__section--even {
+  text-align: center;
+  padding: 0.9375rem 3.125rem;
+  color: red;
+  border: 1px solid green;
+  font-size: 1rem;
+}
+.main__footer {
+  width: 100%;
+  margin-top: 1.25rem;
+  color: green;
+  border: 1px solid blue;
+  font-size: 1rem;
+}
+.main__footer--article {
+  font-size: 1.5rem;
+  color: green;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
