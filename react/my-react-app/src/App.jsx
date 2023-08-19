@@ -1,12 +1,14 @@
-import './App.css'
+import "./App.css";
+import Hello from "./Hello";
+import Message from "./Message";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
+      <Hello />
+      <Message />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
