@@ -12,14 +12,10 @@ function value() {
   });
 }
 
-function resolve(data) {
-  console.log(`Number: ${data}`);
-}
-
-function reject(error) {
-  console.log(`Error: ${error}`);
-}
-
 value()
-    .then(resolve)
-    .catch(reject);
+  .then((data) => {
+    console.log(`Number: ${data}`);
+  })
+  .catch((error) => {
+    console.error(`Error: ${error}`);
+  });

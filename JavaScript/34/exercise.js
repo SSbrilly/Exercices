@@ -1,10 +1,15 @@
-function printAsyncName() {
+function printAsyncName(callback, name) {
   setTimeout(() => {
     console.log("Hello");
+    callback(name)
   }, 1000);
 }
 
-setInterval(printAsyncName, 2000);
+const printname = (name) => {
+  setInterval(() => {
+    console.log(name);
+  }, 2000);
+}
 
-printAsyncName();
+printAsyncName(printname, "Simone");
 

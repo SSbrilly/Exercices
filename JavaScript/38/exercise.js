@@ -1,6 +1,6 @@
 const isLogged = true;
 
-function login() {
+function login(isLogged) {
   return new Promise((resolve, reject) => {
     if (isLogged) {
       let number = Math.random();
