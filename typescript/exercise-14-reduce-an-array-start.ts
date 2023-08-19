@@ -2,12 +2,7 @@
  * START: Follow the instructions below.
  */
 
-const populations = [
-    1_412_600_000,
-    60_317_116,
-    69_950_850,
-    10_678_632,
-];
+const populations = [1_412_600_000, 60_317_116, 69_950_850, 10_678_632];
 
 // The Array reduce method allows us to generate a single value from
 // an array of values. Below we're using it to sum the values of the
@@ -20,8 +15,8 @@ const populations = [
 // Hint: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 
 const sumOfPopulations = populations.reduce((total, population) => {
-    return total + population;
-}, false);
+  return total + population;
+}, 0);
 
 console.log(sumOfPopulations);
 
