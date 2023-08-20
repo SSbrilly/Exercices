@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Age from "./Age"; // Import the Age component
+import Age from "./Age";
 
 class Welcome extends Component {
   render() {
