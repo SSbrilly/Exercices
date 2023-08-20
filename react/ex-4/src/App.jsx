@@ -1,16 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import ClickCounter from "./ClickCounter";
+import GithubUser from "./GithubUser";
 
 function App() {
-  const handleCounterChange = (newCount) => {
-    console.log("Counter value changed:", newCount);
-  };
-
   return (
     <div className="App">
-      <h1>React App</h1>
-      <ClickCounter onCounterChange={handleCounterChange} />
+      <h1>GitHub User App</h1>
+      <GithubUser username="SSbrilly" />
     </div>
   );
 }
