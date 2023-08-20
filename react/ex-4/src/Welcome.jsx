@@ -7,7 +7,9 @@ class Welcome extends Component {
     return (
       <div>
         <p>Welcome, {name || "Guest"}!</p>
-        {age > 18 && <Age age={age} />}{" "}
+        {age !== undefined && age !== null && age !== "" && (
+          <Age age={age} />
+        )}{" "}
       </div>
     );
   }
