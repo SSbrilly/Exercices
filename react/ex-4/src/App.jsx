@@ -1,8 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import "./App.css";
 import GithubUser from "./GithubUser";
 import ShowGithubUser from "./ShowGithubUser";
+
+function NotFound() {
+  return <h2>404 - Not Found</h2>;
+}
 
 function App() {
   return (
@@ -23,8 +27,11 @@ function App() {
           </ul>
         </nav>
 
-        <Route path="/github-user" component={GithubUser} />
-        <Route path="/users/:username" component={ShowGithubUser} />
+        <Switch>
+          <Route path="/github-user" component={GithubUser} />
+          <Route path="/users/:username" component={ShowGithubUser} />
+          <Route component={NotFound} />
+        </Switch>
       </div>
     </Router>
   );
