@@ -4,12 +4,12 @@ import Age from "./Age";
 class Welcome extends Component {
   render() {
     const { name, age } = this.props;
+    const isAgeInRange = age > 18 && age < 65;
+
     return (
       <div>
         <p>Welcome, {name || "Guest"}!</p>
-        {age !== undefined && age !== null && age !== "" && (
-          <Age age={age} />
-        )}{" "}
+        {isAgeInRange && <Age age={age} />}{" "}
       </div>
     );
   }
