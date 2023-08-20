@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-import Login from "./Login";
+import ClickCounter from "./ClickCounter";
 
 function App() {
+  const handleCounterChange = (newCount) => {
+    console.log("Counter value changed:", newCount);
+  };
+
   return (
     <div className="App">
-      <Login />
+      <h1>React App</h1>
+      <ClickCounter onCounterChange={handleCounterChange} />
     </div>
   );
 }
