@@ -4,8 +4,8 @@ import Welcome from "./Welcome";
 
 function App() {
   return (
-    <div>
-      <Welcome name={<strong>"Simone"</strong>} age={30} />
+    <div className="App">
+      <Welcome name={<strong>Simone</strong>} age={30} />
     </div>
   );
 }

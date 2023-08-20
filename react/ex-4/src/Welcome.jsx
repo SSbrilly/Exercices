@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Age from "./Age"; // Import the Age component
 
 class Welcome extends Component {
   render() {
@@ -6,7 +7,7 @@ class Welcome extends Component {
     return (
       <div>
         <p>Welcome, {name || "Guest"}!</p>
-        {age && <p>Your age is {age}</p>}
+        {age && <Age age={age} />}
       </div>
     );
   }
