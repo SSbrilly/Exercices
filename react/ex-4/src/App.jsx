@@ -1,16 +1,17 @@
 import React from "react";
-import "./App.css";
-import GithubUser from "./GithubUser";
-import useGithubUser from "./useGithubUser";
+import CarDetails from "./CarDetails";
 
 function App() {
-  const username = "SSbrilly";
-  const userData = useGithubUser(username);
+  const initialCarData = {
+    model: "",
+    year: "",
+    color: "",
+  };
 
   return (
     <div className="App">
-      <h1>GitHub User App</h1>
-      <GithubUser username={username} />
+      <h1>Car Details App</h1>
+      <CarDetails initialData={initialCarData} />
     </div>
   );
 }
