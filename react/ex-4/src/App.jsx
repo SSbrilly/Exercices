@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Login from "./Login";
+import UncontrolledLogin from "./UncontrolledLogin";
 
 function App() {
   const handleLogin = (userData) => {
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <Login onLogin={handleLogin} />
+      <UncontrolledLogin onLogin={handleLogin} />
     </div>
   );
 }
