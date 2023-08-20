@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import "./App.css";
-import GithubUser from "./GithubUser";
+import GithubUserList from "./GithubUserList";
 import ShowGithubUser from "./ShowGithubUser";
 
 function NotFound() {
@@ -19,17 +19,16 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/github-user">Github User</Link>
-            </li>
-            <li>
-              <Link to="/users/johndoe">Show Github User</Link>
+              <Link to="/github-user-list">Github User List</Link>
             </li>
           </ul>
         </nav>
 
         <Switch>
-          <Route path="/github-user" component={GithubUser} />
-          <Route path="/users/:username" component={ShowGithubUser} />
+          <Route path="/github-user-list" component={GithubUserList} />
+          <Route path="/users">
+            <Route path="/users/:username" component={ShowGithubUser} />
+          </Route>
           <Route component={NotFound} />
         </Switch>
       </div>
