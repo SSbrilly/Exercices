@@ -8,14 +8,17 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <h1>App React</h1>
+        <h1>React App</h1>
         <nav>
           <ul>
             <li>
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/github-user">Utente Github</Link>
+              <Link to="/github-user">Github User</Link>
+            </li>
+            <li>
+              <Link to="/users/johndoe">Show Github User</Link>
             </li>
           </ul>
         </nav>
