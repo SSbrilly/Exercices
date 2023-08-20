@@ -25,17 +25,13 @@ function App() {
         </nav>
 
         <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => <h2>Welcome to the Home Page</h2>}
+          />
           <Route path="/github-user-list" component={GithubUserList} />
-          <Route path="/users">
-            {/* Nested route for /users/:username */}
-            <Route path="/users/:username" component={ShowGithubUser} />
-            {/* Index route */}
-            <Route
-              exact
-              path="/users"
-              render={() => <p>Add a user and select it</p>}
-            />
-          </Route>
+          <Route path="/users/:username" component={ShowGithubUser} />
           <Route component={NotFound} />
         </Switch>
       </div>
