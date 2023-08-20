@@ -2,10 +2,22 @@ import React from "react";
 import useGithubUser from "./useGithubUser";
 
 function GithubUser({ username }) {
-  const userData = useGithubUser(username);
+  const { userData, error, loading, fetchUserData } = useGithubUser();
+
+  React.useEffect(() => {
+    fetchUserData(username);
+  }, [username, fetchUserData]);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error.message}</p>;
+  }
 
   if (!userData) {
-    return <p>Loading...</p>;
+    return null;
   }
 
   return (
