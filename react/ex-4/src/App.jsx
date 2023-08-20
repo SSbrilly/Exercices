@@ -27,7 +27,14 @@ function App() {
         <Switch>
           <Route path="/github-user-list" component={GithubUserList} />
           <Route path="/users">
+            {/* Nested route for /users/:username */}
             <Route path="/users/:username" component={ShowGithubUser} />
+            {/* Index route */}
+            <Route
+              exact
+              path="/users"
+              render={() => <p>Add a user and select it</p>}
+            />
           </Route>
           <Route component={NotFound} />
         </Switch>
