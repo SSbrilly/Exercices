@@ -1,23 +1,25 @@
 import React from "react";
 import "./App.css";
-import TodoList from "./TodoList";
+import DisplayLanguage from "./DisplayLanguage";
+import { LanguageProvider } from "./LanguageContext";
 
 function App() {
+  const languages = ["English", "Spanish", "French"];
+
   return (
-    <div className="App">
-      <TodoList
-        render={(items, handleRemoveItem) => (
-          <ul>
-            {items.map((item, index) => (
-              <li key={index}>
-                {item}
-                <button onClick={() => handleRemoveItem(index)}>Remove</button>
-              </li>
-            ))}
-          </ul>
-        )}
-      />
-    </div>
+    <LanguageProvider>
+      <div className="App">
+        <h1>Language Selector</h1>
+        <select>
+          {languages.map((language, index) => (
+            <option key={index} value={language}>
+              {language}
+            </option>
+          ))}
+        </select>
+        <DisplayLanguage />
+      </div>
+    </LanguageProvider>
   );
 }
 
