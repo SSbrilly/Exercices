@@ -2,7 +2,7 @@ import React from "react";
 import useGithubUser from "./useGithubUser";
 
 function GithubUser({ username }) {
-  const { user, isLoading, isError } = useGithubUser(username);
+  const { user, isLoading, isError, refetch } = useGithubUser(username);
 
   if (isLoading) {
     return <p>Caricamento...</p>;
@@ -15,12 +15,16 @@ function GithubUser({ username }) {
   return (
     <div>
       <h2>Profilo Utente Github</h2>
-      {user && (
+      {user ? (
         <div>
           <p>Nome: {user.name}</p>
           <p>Posizione: {user.location}</p>
         </div>
+      ) : (
+        <p>Nessun utente selezionato</p>
       )}
+
+      <button onClick={refetch}>Aggiorna Dati</button>
     </div>
   );
 }

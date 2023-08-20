@@ -1,4 +1,4 @@
-import useSWR from "swr";
+import useSWR, { mutate } from "swr";
 
 async function fetchGithubUser(username) {
   const response = await fetch(`https://api.github.com/users/${username}`);
@@ -12,6 +12,7 @@ function useGithubUser(username) {
       user: null,
       isLoading: false,
       isError: false,
+      refetch: () => {},
     };
   }
 
@@ -21,6 +22,7 @@ function useGithubUser(username) {
     user: data,
     isLoading: !error && !data,
     isError: error,
+    refetch: () => mutate(username),
   };
 }
 
