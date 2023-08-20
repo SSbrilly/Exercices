@@ -1,27 +1,27 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./App.css";
-import Counter from "./Counter";
+import GithubUser from "./GithubUser";
+import ShowGithubUser from "./ShowGithubUser";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <h1>React App</h1>
+        <h1>App React</h1>
         <nav>
           <ul>
             <li>
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/counter">Counter</Link>
+              <Link to="/github-user">Utente Github</Link>
             </li>
           </ul>
         </nav>
 
-        <Switch>
-          <Route path="/counter" component={Counter} />
-        </Switch>
+        <Route path="/github-user" component={GithubUser} />
+        <Route path="/users/:username" component={ShowGithubUser} />
       </div>
     </Router>
   );
