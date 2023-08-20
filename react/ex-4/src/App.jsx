@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
-import GithubUserList from "./GithubUserList";
+import CounterComponent from "./CounterComponent";
 
 function App() {
   return (
     <div className="App">
-      <h1>GitHub User App</h1>
-      <GithubUserList />
+      <h1>React App</h1>
+      <CounterComponent />
     </div>
   );
 }
