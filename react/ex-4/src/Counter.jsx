@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-
+import React, { Component } from 'react';
+import CounterDisplay from './CounterDisplay';
 class Counter extends Component {
   constructor(props) {
     super(props);
@@ -9,10 +9,7 @@ class Counter extends Component {
   }
 
   componentDidMount() {
-    this.interval = setInterval(
-      this.incrementCount,
-      this.props.incrementInterval || 1000
-    );
+    this.interval = setInterval(this.incrementCount, this.props.incrementInterval || 1000);
   }
 
   componentWillUnmount() {
@@ -28,7 +25,7 @@ class Counter extends Component {
   render() {
     return (
       <div>
-        <h1>{this.state.count}</h1>
+        <CounterDisplay count={this.state.count} />
       </div>
     );
   }
