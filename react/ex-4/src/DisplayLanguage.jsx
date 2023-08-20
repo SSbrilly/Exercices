@@ -1,13 +1,15 @@
-import React, { useContext } from "react";
+import React from "react";
 import { LanguageContext } from "./LanguageContext";
 
 const DisplayLanguage = () => {
-  const { selectedLanguage } = useContext(LanguageContext);
-
   return (
-    <div>
-      <h2>Selected Language: {selectedLanguage}</h2>
-    </div>
+    <LanguageContext.Consumer>
+      {(context) => (
+        <div>
+          <h1>Selected Language: {context.selectedLanguage}</h1>
+        </div>
+      )}
+    </LanguageContext.Consumer>
   );
 };
 
