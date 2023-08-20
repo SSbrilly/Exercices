@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import ClickTracker from "./ClickTracker";
+import InteractiveWelcome from "./InteractiveWelcome";
 
 function App() {
   return (
     <div className="App">
-      <ClickTracker />
+      <InteractiveWelcome />
     </div>
   );
 }
