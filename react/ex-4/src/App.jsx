@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
-import Counter from "./Counter";
+import GithubUserList from "./GithubUserList";
 
 function App() {
   return (
     <div className="App">
-      <h1>React App</h1>
-      <Counter initialCount={0} interval={1000} increment={1} />
+      <h1>GitHub User App</h1>
+      <GithubUserList />
     </div>
   );
 }
