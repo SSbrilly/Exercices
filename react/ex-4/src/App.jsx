@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Welcome name="John" age={30} />
       <Welcome name="Alice" age={15} />
-      <Counter />
+      <Counter initialValue={10} incrementInterval={2000} incrementAmount={2} />
     </div>
   );
 }
