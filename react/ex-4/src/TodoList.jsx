@@ -20,6 +20,12 @@ class TodoList extends Component {
     }
   };
 
+  handleRemoveItem = (index) => {
+    const { items } = this.state;
+    const updatedItems = items.filter((_, i) => i !== index);
+    this.setState({ items: updatedItems });
+  };
+
   handleReset = () => {
     this.setState({
       items: [],
@@ -34,7 +40,12 @@ class TodoList extends Component {
       <div>
         <ul>
           {items.map((item, index) => (
-            <li key={index}>{item}</li>
+            <li key={index}>
+              {item}
+              <button onClick={() => this.handleRemoveItem(index)}>
+                Remove
+              </button>
+            </li>
           ))}
         </ul>
         <input
