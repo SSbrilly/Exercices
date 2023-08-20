@@ -1,12 +1,18 @@
 import React from "react";
 import "./App.css";
-import CounterComponent from "./CounterComponent";
+import FilteredList from "./FilteredList";
 
 function App() {
+  const items = [
+    { id: 1, name: "Alice", age: 25 },
+    { id: 2, name: "Bob", age: 30 },
+    { id: 3, name: "Charlie", age: 18 },
+  ];
+
   return (
     <div className="App">
-      <h1>React App</h1>
-      <CounterComponent />
+      <h1>FilteredList App</h1>
+      <FilteredList items={items} />
     </div>
   );
 }
