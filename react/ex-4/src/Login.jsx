@@ -16,6 +16,13 @@ class Login extends Component {
     onLogin(this.state);
   };
 
+  handleReset = () => {
+    this.setState({
+      username: "",
+      password: "",
+    });
+  };
+
   render() {
     const { username, password } = this.state;
     const isButtonDisabled = username === "" || password === "";
@@ -39,6 +46,7 @@ class Login extends Component {
         <button disabled={isButtonDisabled} onClick={this.handleLogin}>
           Login
         </button>
+        <button onClick={this.handleReset}>Reset</button>
       </div>
     );
   }
