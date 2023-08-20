@@ -35,19 +35,11 @@ class TodoList extends Component {
 
   render() {
     const { items, newItem } = this.state;
+    const { render } = this.props;
 
     return (
       <div>
-        <ul>
-          {items.map((item, index) => (
-            <li key={index}>
-              {item}
-              <button onClick={() => this.handleRemoveItem(index)}>
-                Remove
-              </button>
-            </li>
-          ))}
-        </ul>
+        {render(items, this.handleRemoveItem)}
         <input
           type="text"
           value={newItem}
