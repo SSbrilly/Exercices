@@ -1,30 +1,36 @@
 import React, { Component } from "react";
 
 class UncontrolledLogin extends Component {
+  constructor(props) {
+    super(props);
+    this.usernameInput = React.createRef();
+    this.passwordInput = React.createRef();
+  }
+
+  componentDidMount() {
+    this.usernameInput.current.focus();
+  }
+
   handleLogin = () => {
-    const username = this.usernameInput.value;
-    const password = this.passwordInput.value;
+    const username = this.usernameInput.current.value;
+    const password = this.passwordInput.current.value;
     const userData = { username, password };
     const { onLogin } = this.props;
     onLogin(userData);
   };
 
   handleReset = () => {
-    this.usernameInput.value = "";
-    this.passwordInput.value = "";
+    this.usernameInput.current.value = "";
+    this.passwordInput.current.value = "";
   };
 
   render() {
     return (
       <div>
-        <input
-          type="text"
-          ref={(input) => (this.usernameInput = input)}
-          placeholder="Username"
-        />
+        <input type="text" ref={this.usernameInput} placeholder="Username" />
         <input
           type="password"
-          ref={(input) => (this.passwordInput = input)}
+          ref={this.passwordInput}
           placeholder="Password"
         />
         <button onClick={this.handleLogin}>Login</button>
