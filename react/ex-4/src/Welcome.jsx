@@ -5,11 +5,12 @@ class Welcome extends Component {
   render() {
     const { name, age } = this.props;
     const isAgeInRange = age > 18 && age < 65;
+    const isNameJohn = name === "John";
 
     return (
       <div>
         <p>Welcome, {name || "Guest"}!</p>
-        {isAgeInRange && <Age age={age} />}{" "}
+        {isAgeInRange && isNameJohn && <Age age={age} />}{" "}
       </div>
     );
   }
