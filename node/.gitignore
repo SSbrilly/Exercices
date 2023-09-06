@@ -1,0 +1,9 @@
+# File di log
+*.log
+
+# File generati dall'ambiente di sviluppo
+.env
+.vscode/
+
+# Directory node_modules
+node_modules/
